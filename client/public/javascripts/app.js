@@ -539,7 +539,7 @@ window.require.register("views/templates/note", function(exports, require, modul
   var buf = [];
   with (locals || {}) {
   var interp;
-  buf.push('<' + (model.fullPath) + '>- ' + escape((interp = model.title) == null ? '' : interp) + '</' + (model.fullPath) + '>');
+  buf.push('<h3>' + escape((interp = model.title) == null ? '' : interp) + '</h3>');
   }
   return buf.join("");
   };
