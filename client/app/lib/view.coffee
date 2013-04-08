@@ -6,7 +6,11 @@ module.exports = class View extends Backbone.View
         @render()
 
     getRenderData: ->
-        model: @model?.toJSON()
+        data = model: @model?.toJSON()
+        if model?
+            console.log 'model' + model
+        console.log 'data' +  data
+        data
 
     render: ->
         @beforeRender()
