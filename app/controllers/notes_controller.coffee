@@ -3,7 +3,9 @@ action 'all', ->
 
 action 'file', ->
     Note.find params.id, (err, note) ->
-        note.getFile params.name, (err, res, body) ->
-            if err then send 500
-            else send 200
+        note.getFile params.name, (err, response, body) ->
+            if err
+                send 500
+            else
+                send 200
         .pipe res
